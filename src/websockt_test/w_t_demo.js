@@ -1,4 +1,4 @@
-var ws = new WebSocket("wss://echo.websocket.org");
+var ws = new WebSocket("ws://192.168.6.132:8080/service/websocket?cid=1&sid=3");
 
 // 连接 webocket
 ws.onopen = function(evt) { 
@@ -9,7 +9,7 @@ ws.onopen = function(evt) {
 // 接收消息
 ws.onmessage = function(evt) {
   console.log( "Received Message: " + evt.data);
-  ws.close(); // 主动关闭连接
+  // ws.close(); // 主动关闭连接
 };
 
 
