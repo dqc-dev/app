@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://192.168.6.132:8080/service/websocket?cid=1&sid=3");
+var ws = new WebSocket("ws://localhost:8080/service/websocket?18058148144");
 
 // 连接 webocket
 ws.onopen = function(evt) { 
