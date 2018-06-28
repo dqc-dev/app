@@ -2,8 +2,10 @@ var ws = new WebSocket("ws://localhost:8080/service/websocket?18058148144");
 
 // 连接 webocket
 ws.onopen = function(evt) { 
-  console.log("Connection open ..."); 
-  ws.send("Hello WebSockets!"); // 发送消息
+  console.log("Connection open ...");
+  var msg={"topic":"hello/time/france","payload":"hello"};
+
+  ws.send(JSON.stringify(msg)); // 发送消息
 };
 
 // 接收消息
